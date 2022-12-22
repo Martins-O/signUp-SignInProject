@@ -36,4 +36,14 @@ public class UserRepositoriesImpl implements UserRepositories{
 			}
 		}
 	}
+
+	@Override
+	public void updateUser(User user) {
+		User savedUser = findByEmail(user.getEmail());
+		savedUser.setFirstName(user.getFirstName());
+		savedUser.setLastName(user.getLastName());
+		savedUser.setPhoneNumber(user.getPhoneNumber());
+	}
+
+
 }

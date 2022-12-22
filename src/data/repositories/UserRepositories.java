@@ -9,4 +9,6 @@ public interface UserRepositories {
 	User findByEmail(String email);
 	User register(User user);
 	void delete(String email);
+
+	void updateUser(User user);
 }
