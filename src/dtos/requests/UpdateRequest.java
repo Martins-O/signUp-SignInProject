@@ -4,13 +4,11 @@ import lombok.Data;
 import lombok.Getter;
 
 @Getter
-public class RegisterRequest {
-
+public class UpdateRequest {
 	private String firstName;
 	private String lastName;
-	private String email;
-	private String password;
 	private String phoneNumber;
+	private String email;
 
 
 }

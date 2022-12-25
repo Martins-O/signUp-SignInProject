@@ -4,10 +4,9 @@ import lombok.Data;
 import lombok.Getter;
 
 @Getter
-public class LoginRequest {
+public class ChangePasswordRequest {
+	private String oldPassword;
+	private  String newPassword;
 	private String email;
-	private String password;
-	private String passwordConfirmation;
-
 
 }

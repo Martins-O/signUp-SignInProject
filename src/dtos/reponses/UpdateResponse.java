@@ -1,13 +1,14 @@
 package dtos.reponses;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Setter;
 
-@Setter
-public class LoginResponse {
-
-	private String email;
+@AllArgsConstructor
+public class UpdateResponse {
 	private String message;
 
 
 }
+
+ 

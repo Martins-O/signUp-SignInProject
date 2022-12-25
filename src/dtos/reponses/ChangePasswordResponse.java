@@ -4,8 +4,7 @@ import lombok.Data;
 import lombok.Setter;
 
 @Setter
-public class LoginResponse {
-
+public class ChangePasswordResponse {
 	private String email;
 	private String message;
 

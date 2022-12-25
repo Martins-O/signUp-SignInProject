@@ -45,5 +45,7 @@ public class UserRepositoriesImpl implements UserRepositories{
 		savedUser.setPhoneNumber(user.getPhoneNumber());
 	}
 
-
+	public long count(){
+		return usersDb.size();
+	}
 }

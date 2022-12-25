@@ -1,21 +1,22 @@
 package services;
 
-import data.model.User;
 import dtos.reponses.LoginResponse;
 import dtos.reponses.RegisterResponse;
-import dtos.reponses.ResetPasswordResponse;
-import dtos.requests.DeleteRequest;
-import dtos.requests.LoginRequest;
-import dtos.requests.RegisterRequest;
-import dtos.requests.ResetPasswordRequest;
+import dtos.reponses.ChangePasswordResponse;
+import dtos.reponses.UpdateResponse;
+import dtos.requests.*;
+import exception.signUpSignInException;
 
 public interface UserServices {
 
 	RegisterResponse createUser(RegisterRequest request);
 
-	LoginResponse login(LoginRequest request);
+	LoginResponse login(LoginRequest request) throws signUpSignInException;
 
-	void deleteUser(DeleteRequest request);
+	void deleteUser(String email, String password);
 
-	ResetPasswordResponse resetPassword(ResetPasswordRequest request);
+	void resetPassword(ChangePasswordRequest request) throws signUpSignInException;
+	UpdateResponse updateDetails(UpdateRequest request);
+
+
 }
